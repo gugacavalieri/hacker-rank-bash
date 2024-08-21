@@ -14,5 +14,5 @@ jobs:
       - name: Build With Compose
         run: docker compose build this
 
-      - name: Run Shellcheck
+      - name: Run Tests with Bats
         run: docker compose run --rm this bats problems/**/*.test.sh
