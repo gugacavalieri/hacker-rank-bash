@@ -5,7 +5,7 @@ on:
     branches: ["**"]
 
 jobs:
-  Test:
+  Lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -15,4 +15,4 @@ jobs:
         run: docker compose build this
 
       - name: Run Shellcheck
-        run: docker compose run --rm --build this shellcheck problems/**/*.sh
+        run: docker compose run --rm this shellcheck problems/**/*.sh
