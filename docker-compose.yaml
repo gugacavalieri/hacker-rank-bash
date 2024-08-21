@@ -1,0 +1,9 @@
+services:
+  this:
+    build:
+      dockerfile: Dockerfile
+      target: production
+      context: .
+    entrypoint: [""]
+    volumes:
+      - '.:/code'
